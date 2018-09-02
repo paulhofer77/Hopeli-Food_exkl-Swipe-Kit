@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64FD5F8824A0589AE2069AF5 /* Pods_Hopeli_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */; };
+		C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316A82139F9A000E0B8B9 /* AppDelegate.swift */; };
+		C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316AA2139F9A000E0B8B9 /* StartViewController.swift */; };
+		C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316AC2139F9A000E0B8B9 /* Main.storyboard */; };
+		C61316B02139F9A100E0B8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61316AF2139F9A100E0B8B9 /* Assets.xcassets */; };
+		C61316B32139F9A100E0B8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316B12139F9A100E0B8B9 /* LaunchScreen.storyboard */; };
+		C6BB5862213BD4A1008B942E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB5861213BD4A1008B942E /* LoginViewController.swift */; };
+		C6DC05FF2139FBB400FDDCAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC05FE2139FBB400FDDCAE /* User.swift */; };
+		C6DC0601213A059400FDDCAE /* DishesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */; };
+		C6DC0604213A060800FDDCAE /* Dishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0603213A060800FDDCAE /* Dishes.swift */; };
+		C6DC0608213AFF2000FDDCAE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */; };
+		C6DC060B213B1C8E00FDDCAE /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */; };
+		C6DC060D213B321300FDDCAE /* DishesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hopeli_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7566E1F9ED7B468D4AE5627B /* Pods-Hopeli Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.debug.xcconfig"; sourceTree = "<group>"; };
+		A1851BFF842341DE4C0245D1 /* Pods-Hopeli Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.release.xcconfig"; sourceTree = "<group>"; };
+		C61316A52139F9A000E0B8B9 /* Hopeli Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hopeli Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61316A82139F9A000E0B8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C61316AA2139F9A000E0B8B9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		C61316AD2139F9A000E0B8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C61316AF2139F9A100E0B8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C61316B22139F9A100E0B8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C61316B42139F9A100E0B8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6BB5861213BD4A1008B942E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C6DC05FE2139FBB400FDDCAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewController.swift; sourceTree = "<group>"; };
+		C6DC0603213A060800FDDCAE /* Dishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dishes.swift; sourceTree = "<group>"; };
+		C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C61316A22139F9A000E0B8B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64FD5F8824A0589AE2069AF5 /* Pods_Hopeli_Food.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C613169C2139F9A000E0B8B9 = {
+			isa = PBXGroup;
+			children = (
+				C61316A72139F9A000E0B8B9 /* Hopeli Food */,
+				C61316A62139F9A000E0B8B9 /* Products */,
+				ED482B20460E2EAC2F5F3A09 /* Pods */,
+				DCE0D8F53B57BFEA38B90B77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C61316A62139F9A000E0B8B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C61316A52139F9A000E0B8B9 /* Hopeli Food.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C61316A72139F9A000E0B8B9 /* Hopeli Food */ = {
+			isa = PBXGroup;
+			children = (
+				C61316A82139F9A000E0B8B9 /* AppDelegate.swift */,
+				C6DC0605213A060F00FDDCAE /* Model */,
+				C6DC0602213A059E00FDDCAE /* Controller */,
+				C61316AC2139F9A000E0B8B9 /* Main.storyboard */,
+				C61316AF2139F9A100E0B8B9 /* Assets.xcassets */,
+				C61316B12139F9A100E0B8B9 /* LaunchScreen.storyboard */,
+				C61316B42139F9A100E0B8B9 /* Info.plist */,
+			);
+			path = "Hopeli Food";
+			sourceTree = "<group>";
+		};
+		C6DC0602213A059E00FDDCAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6BB5861213BD4A1008B942E /* LoginViewController.swift */,
+				C61316AA2139F9A000E0B8B9 /* StartViewController.swift */,
+				C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */,
+				C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */,
+				C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */,
+				C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6DC0605213A060F00FDDCAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6DC05FE2139FBB400FDDCAE /* User.swift */,
+				C6DC0603213A060800FDDCAE /* Dishes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DCE0D8F53B57BFEA38B90B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED482B20460E2EAC2F5F3A09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7566E1F9ED7B468D4AE5627B /* Pods-Hopeli Food.debug.xcconfig */,
+				A1851BFF842341DE4C0245D1 /* Pods-Hopeli Food.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C61316A42139F9A000E0B8B9 /* Hopeli Food */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C61316B72139F9A100E0B8B9 /* Build configuration list for PBXNativeTarget "Hopeli Food" */;
+			buildPhases = (
+				664034F83E24B9B704BD880C /* [CP] Check Pods Manifest.lock */,
+				C61316A12139F9A000E0B8B9 /* Sources */,
+				C61316A22139F9A000E0B8B9 /* Frameworks */,
+				C61316A32139F9A000E0B8B9 /* Resources */,
+				B9BDB089F17A8874AB2B7EFA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hopeli Food";
+			productName = "Hopeli Food";
+			productReference = C61316A52139F9A000E0B8B9 /* Hopeli Food.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C613169D2139F9A000E0B8B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Hopeli;
+				TargetAttributes = {
+					C61316A42139F9A000E0B8B9 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C61316A02139F9A000E0B8B9 /* Build configuration list for PBXProject "Hopeli Food" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C613169C2139F9A000E0B8B9;
+			productRefGroup = C61316A62139F9A000E0B8B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C61316A42139F9A000E0B8B9 /* Hopeli Food */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C61316A32139F9A000E0B8B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61316B32139F9A100E0B8B9 /* LaunchScreen.storyboard in Resources */,
+				C61316B02139F9A100E0B8B9 /* Assets.xcassets in Resources */,
+				C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		664034F83E24B9B704BD880C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hopeli Food-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9BDB089F17A8874AB2B7EFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C61316A12139F9A000E0B8B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6BB5862213BD4A1008B942E /* LoginViewController.swift in Sources */,
+				C6DC060B213B1C8E00FDDCAE /* UserDetailViewController.swift in Sources */,
+				C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */,
+				C6DC060D213B321300FDDCAE /* DishesDetailViewController.swift in Sources */,
+				C6DC0604213A060800FDDCAE /* Dishes.swift in Sources */,
+				C6DC0601213A059400FDDCAE /* DishesTableViewController.swift in Sources */,
+				C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */,
+				C6DC0608213AFF2000FDDCAE /* UserTableViewCell.swift in Sources */,
+				C6DC05FF2139FBB400FDDCAE /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C61316AC2139F9A000E0B8B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C61316AD2139F9A000E0B8B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C61316B12139F9A100E0B8B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C61316B22139F9A100E0B8B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C61316B52139F9A100E0B8B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C61316B62139F9A100E0B8B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C61316B82139F9A100E0B8B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7566E1F9ED7B468D4AE5627B /* Pods-Hopeli Food.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6486ZWCC;
+				INFOPLIST_FILE = "Hopeli Food/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "at.hopeli.Hopeli-Food";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C61316B92139F9A100E0B8B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1851BFF842341DE4C0245D1 /* Pods-Hopeli Food.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6486ZWCC;
+				INFOPLIST_FILE = "Hopeli Food/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "at.hopeli.Hopeli-Food";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C61316A02139F9A000E0B8B9 /* Build configuration list for PBXProject "Hopeli Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61316B52139F9A100E0B8B9 /* Debug */,
+				C61316B62139F9A100E0B8B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C61316B72139F9A100E0B8B9 /* Build configuration list for PBXNativeTarget "Hopeli Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61316B82139F9A100E0B8B9 /* Debug */,
+				C61316B92139F9A100E0B8B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C613169D2139F9A000E0B8B9 /* Project object */;
+}
