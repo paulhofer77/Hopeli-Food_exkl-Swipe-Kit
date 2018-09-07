@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     let realm = try! Realm()
     var userDishes: List<Dishes>?
@@ -26,7 +26,19 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userImage.image = UIImage(data: selectedUser?.userImage! as! Data)
+//        userImage.image = UIImage(data: selectedUser?.userImage! as! Data)
+        userImage.layer.borderWidth = 1
+        userImage.layer.masksToBounds = false
+        userImage.layer.borderColor = UIColor.black.cgColor
+        userImage.layer.cornerRadius = userImage.frame.height/2
+        userImage.clipsToBounds = true
+        
+        if  let imageFromSelectedUser = selectedUser?.userImage {
+            userImage.image = UIImage(data: imageFromSelectedUser as! Data)
+        } else {
+            userImage.image = UIImage(named: "user-default-image")
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,6 +128,46 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
     }
+    
+    
+    //    MARK: - Add Picture with ImagePicker
+    @IBAction func tapGestureForImageSelection(_ sender: UITapGestureRecognizer) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            picker.dismiss(animated: true, completion: {
+                
+                do {
+                    try self.realm.write {
+                        self.selectedUser?.userImage = NSData(data: UIImageJPEGRepresentation(image, 1)!)
+                    }
+                }catch {
+                    print("Error while deleting \(error)")
+                }
+                self.userImage.image = image
+            })
+        }
+        
+        
+    }
+    
+    
+    
+    
     
 
 }

@@ -6,6 +6,9 @@ target 'Hopeli Food' do
 
   # Pods for Hopeli Food
 pod 'RealmSwift'
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
 
 end

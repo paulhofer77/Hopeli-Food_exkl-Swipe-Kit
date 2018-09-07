@@ -12,7 +12,9 @@ import RealmSwift
 class User: Object {
     
     @objc dynamic var userName: String = ""
-    @objc dynamic var userId: Int = 0
+    @objc dynamic var userEmail: String = ""
+    @objc dynamic var userPasswort: String = ""
+    @objc dynamic var userId: String?
     @objc dynamic var userImage: NSData?
     let dishes = List<Dishes>()
     

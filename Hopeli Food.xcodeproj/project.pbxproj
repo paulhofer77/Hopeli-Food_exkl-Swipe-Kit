@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64FD5F8824A0589AE2069AF5 /* Pods_Hopeli_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */; };
+		C60712EE213BDCAB001162F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C60712ED213BDCAA001162F2 /* GoogleService-Info.plist */; };
 		C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316A82139F9A000E0B8B9 /* AppDelegate.swift */; };
 		C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316AA2139F9A000E0B8B9 /* StartViewController.swift */; };
 		C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316AC2139F9A000E0B8B9 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hopeli_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7566E1F9ED7B468D4AE5627B /* Pods-Hopeli Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.debug.xcconfig"; sourceTree = "<group>"; };
 		A1851BFF842341DE4C0245D1 /* Pods-Hopeli Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.release.xcconfig"; sourceTree = "<group>"; };
+		C60712ED213BDCAA001162F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C61316A52139F9A000E0B8B9 /* Hopeli Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hopeli Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61316A82139F9A000E0B8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61316AA2139F9A000E0B8B9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				C61316AF2139F9A100E0B8B9 /* Assets.xcassets */,
 				C61316B12139F9A100E0B8B9 /* LaunchScreen.storyboard */,
 				C61316B42139F9A100E0B8B9 /* Info.plist */,
+				C60712ED213BDCAA001162F2 /* GoogleService-Info.plist */,
 			);
 			path = "Hopeli Food";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				C61316B32139F9A100E0B8B9 /* LaunchScreen.storyboard in Resources */,
 				C61316B02139F9A100E0B8B9 /* Assets.xcassets in Resources */,
+				C60712EE213BDCAB001162F2 /* GoogleService-Info.plist in Resources */,
 				C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,13 +223,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

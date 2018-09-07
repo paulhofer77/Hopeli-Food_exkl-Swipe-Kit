@@ -67,7 +67,7 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let action = UIAlertAction(title: "Add User", style: .default) { (action) in
             let newUser = User()
             newUser.userName = textfield.text!
-            newUser.userId = self.user?.count ?? 0 + 1
+//            newUser.userId = self.user?.count ?? 0 + 1
         
             let image = UIImage(named: "user-default-image")
             newUser.userImage = NSData(data: UIImagePNGRepresentation(image!)!)
