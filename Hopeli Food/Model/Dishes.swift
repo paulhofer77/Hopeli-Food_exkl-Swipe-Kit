@@ -14,7 +14,8 @@ class Dishes: Object {
     @objc dynamic var dishName: String = ""
     @objc dynamic var dishTimestamp: Date?
     @objc dynamic var dishImage: NSData?
-//    var parentUser = LinkingObjects(fromType: User.self, property: "dishes")
+   
     let users = List<User>()
+    let ingredients = List<Ingredients>()
     
 }

@@ -20,12 +20,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
+        
+        let ingredientArray = ["Lauch", "Pfeffer", "Salz", "Schwein", "Majoran", "Zwiebel", "Petersilie", "Mehl", "Huhn"]
+        
+        let realm = try! Realm()
+        var ingredients = Ingredients()
+        
+       
+        for result in ingredientArray {
+            print(result)
+            ingredients.ingredientName = result
+            let checkForResult = realm.objects(Ingredients.self).filter("ingredientName = %@", result)
+            print(checkForResult)
+            if checkForResult.count == 0 {
+
+                do {
+                    try realm.write {
+                    realm.add(ingredients)
+                    ingredients = Ingredients()
+                    }
+                }catch {
+                    print("Couldn´t Save Ingredient: \(error)")
+                }
+            }
+        }
+        
+        
+//        ingredients.ingredientName = ingredient2
 //        do {
-//            let realm =  try Realm()
-//        } catch {
-//            print(error)
+//            try realm.write {
+//                realm.add(ingredients)
+//            }
+//        }catch {
+//            print("Couldn´t Save Ingredient: \(error)")
 //        }
         
+       
         FirebaseApp.configure()
         
         return true

@@ -39,12 +39,46 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             userImage.image = UIImage(named: "user-default-image")
         }
         
+        
     }
+            
+        
     
     override func viewWillAppear(_ animated: Bool) {
         title = selectedUser?.userName
         loadDishesData()
         dishesTableView.reloadData()
+        
+        if selectedUser?.userName == "" {
+            print("no Name")
+            var userNameTextfield = UITextField()
+            
+            let setUserNameAlert = UIAlertController(title: "Set your Name", message: "Set your name to personalize", preferredStyle: .alert)
+            
+            let setUpUserNameAction = UIAlertAction(title: "Define your User Name", style: .default) { (action) in
+        
+                
+                do {
+                    try self.realm.write {
+                        self.selectedUser?.userName = userNameTextfield.text!
+                    }
+                }catch {
+                    print("Couldn´t Save Category: \(error)")
+                }
+                
+            }
+            
+            setUserNameAlert.addAction(setUpUserNameAction)
+            
+            setUserNameAlert.addTextField { (userNameTextfield1) in
+                userNameTextfield1.placeholder = "Define your User Name"
+                userNameTextfield = userNameTextfield1
+            }
+            
+            self.present(setUserNameAlert, animated: true, completion: nil)
+            
+        }
+        
     }
     
    
@@ -117,7 +151,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         let identifier = segue.identifier
         
         if identifier == "goToDishes" {
-        let destinationVC = segue.destination as! DishesTableViewController
+        let destinationVC = segue.destination as! DefineDishesViewController
             destinationVC.selectedUser = selectedUser
         
         } else if identifier == "goToDishesDetail" {
@@ -137,6 +171,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
+//        imagePicker.cameraViewTransform = CGAffineTransform(a: 10, b: 10, c: 10, d: 10, tx: 20, ty: 20)
         self.present(imagePicker, animated: true, completion: nil)
         
     }
@@ -148,7 +183,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
                 
                 do {
@@ -165,9 +200,17 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    //    MARK: - Logout Button
     
+    let defaults = UserDefaults.standard
     
-    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        defaults.removeObject(forKey: "userEmail")
+        defaults.removeObject(forKey: "userPasswort")
+        
+        performSegue(withIdentifier: "logoutSegue", sender: self)
+        
+    }
     
 
 }

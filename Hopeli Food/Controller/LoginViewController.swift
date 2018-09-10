@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import RealmSwift
+import PopupDialog
 
 class LoginViewController: UIViewController {
 
@@ -17,50 +18,35 @@ class LoginViewController: UIViewController {
     let newUser = User()
     let defaults = UserDefaults.standard
     
-    @IBOutlet weak var loginButton: UIButton!
+    
     @IBOutlet weak var createUserButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.isHidden = true
-        loginPasswortTextfield.isHidden = true
-        loginEmailTextfield.isHidden = true
+        
         if let userEmail = defaults.string(forKey: "userEmail") {
             let userPasswort = defaults.string(forKey: "userPasswort")
-            loginEmailTextfield.text = userEmail
-            loginPasswortTextfield.text = userPasswort
-            loginFunction()
-            
-//            createUserButton.isHidden = true
-            
+            loginFunction(userEmail: userEmail, userPassword: userPasswort!)
+
         }
-        // Do any additional setup after loading the view.
     }
 
    
-    @IBOutlet weak var loginEmailTextfield: UITextField!
-    @IBOutlet weak var loginPasswortTextfield: UITextField!
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
-        
-        loginFunction()
-        
-    }
-    
-    func loginFunction () {
+    func loginFunction (userEmail: String, userPassword: String) {
         
         
-        
-        Auth.auth().signIn(withEmail: loginEmailTextfield.text!, password: loginPasswortTextfield.text!) { (user, error) in
+        Auth.auth().signIn(withEmail: userEmail, password: userPassword) { (user, error) in
             if error != nil {
                 print("error appeared: \(error!)")
             }else {
                 print("Reg successful")
                 
                 let userIdFromFirebase = Auth.auth().currentUser?.uid
-                self.user = self.realm.objects(User.self).filter("userId = %@", userIdFromFirebase)
+//                hier gibt es ein Problem wenn Realm keine User hat
+                self.user = self.realm.objects(User.self).filter("userId = %@", userIdFromFirebase!)
                 
-                self.performSegue(withIdentifier: "gotToUserFromLogin", sender: self.loginButton)
+                self.performSegue(withIdentifier: "gotToUserFromLogin", sender: self)
             }
         }
     }
@@ -69,17 +55,14 @@ class LoginViewController: UIViewController {
     //    MARK: - Creating a User
     @IBAction func createButtonPressed(_ sender: UIButton) {
         if sender.tag == 1 {
-        var textfieldUserName: UITextField = UITextField()
+//        var textfieldUserName: UITextField = UITextField()
         var textfieldEmail: UITextField = UITextField()
         var textfieldPasswort: UITextField = UITextField()
         let alert = UIAlertController(title: "Create Your Account", message: "Set up your Account", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Create User", style: .default) { (action) in
             
-            self.newUser.userName = textfieldUserName.text!
-//            self.newUser.userEmail = textfieldEmail.text!
-//            self.newUser.userPasswort = textfieldPasswort.text!
-//            self.newUser.userId = self.user?.count ?? 0 + 1
+
             self.defaults.set(textfieldEmail.text!, forKey: "userEmail")
             self.defaults.set(textfieldPasswort.text!, forKey: "userPasswort")
             
@@ -96,12 +79,16 @@ class LoginViewController: UIViewController {
             }
     
         }
-        
+            
+            let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (cancel) in
+                alert.dismiss(animated: true, completion: nil)
+            }
+        alert.addAction(cancelButton)
         alert.addAction(action)
-        alert.addTextField { (userNameTextfield) in
-            userNameTextfield.placeholder = "Set your User Name"
-            textfieldUserName = userNameTextfield
-        }
+//        alert.addTextField { (userNameTextfield) in
+//            userNameTextfield.placeholder = "Set your User Name"
+//            textfieldUserName = userNameTextfield
+//        }
         
         alert.addTextField { (emailTextfield) in
             emailTextfield.placeholder = "EnterYour E-Mail Adress"
@@ -120,11 +107,12 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! UserDetailViewController
-        var identifier = segue.identifier
+        let identifier = segue.identifier
       
         if identifier == "gotToUserFromCreate" {
         destinationVC.selectedUser = newUser
         } else if identifier == "gotToUserFromLogin" {
+            print("segue performing worked")
             destinationVC.selectedUser = user?[0]
         }
     }
@@ -147,11 +135,60 @@ class LoginViewController: UIViewController {
     
     @IBAction func useExistingUserButtonPressed(_ sender: UIButton) {
         if sender.tag == 2 {
-        loginButton.isHidden = false
-        loginPasswortTextfield.isHidden = false
-        loginEmailTextfield.isHidden = false
+           
+            var emailTextfieldForSingIn = UITextField()
+            var passwordTextfieldForSingIn = UITextField()
+            
+            let alertForExistingUser = UIAlertController(title: "Login", message: "If you are already registered user your Email and Password", preferredStyle: .alert)
+            
+            let signInButton = UIAlertAction(title: "Sign In", style: .default) { (singIn) in
+                self.loginFunction(userEmail: emailTextfieldForSingIn.text!, userPassword: passwordTextfieldForSingIn.text!)
+                self.defaults.set(emailTextfieldForSingIn.text!, forKey: "userEmail")
+                self.defaults.set(passwordTextfieldForSingIn.text!, forKey: "userPasswort")
+                
+            }
+            
+            let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (cancel) in
+                alertForExistingUser.dismiss(animated: true, completion: nil)
+            }
+            
+            alertForExistingUser.addAction(cancelButton)
+            alertForExistingUser.addAction(signInButton)
+            
+            alertForExistingUser.addTextField { (emailTextfield) in
+                emailTextfield.placeholder = "Enter Your E-Mail Adress"
+                emailTextfieldForSingIn = emailTextfield
+            }
+            alertForExistingUser.addTextField { (passwortTextfield) in
+                passwortTextfield.placeholder = "Set your Password"
+                passwordTextfieldForSingIn = passwortTextfield
+            }
+            
+            
+            self.present(alertForExistingUser, animated: true, completion: nil)
+            
+//        loginButton.isHidden = false
+//        loginPasswortTextfield.isHidden = false
+//        loginEmailTextfield.isHidden = false
+           
+        popUp.addButton(buttonOne)
+        self.present(popUp, animated: true, completion: nil)
         }
     }
     
 
 }
+
+
+//MARK: - PopUp Dialog methods
+
+    let popUp = PopupDialog(title: "First PopUp", message: "I am just playing around")
+    let buttonOne = CancelButton(title: "Cancel", dismissOnTap: true) {
+        print("Cancelled")
+        }
+
+
+
+
+
+

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		64FD5F8824A0589AE2069AF5 /* Pods_Hopeli_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0699EE80251805BAE4B52197 /* Pods_Hopeli_Food.framework */; };
 		C60712EE213BDCAB001162F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C60712ED213BDCAA001162F2 /* GoogleService-Info.plist */; };
+		C60B017D21459A9600C1B104 /* DefineDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B017C21459A9600C1B104 /* DefineDishesViewController.swift */; };
+		C60B017F21459E1900C1B104 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B017E21459E1900C1B104 /* Ingredients.swift */; };
+		C60B01812145C64F00C1B104 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */; };
 		C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316A82139F9A000E0B8B9 /* AppDelegate.swift */; };
 		C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316AA2139F9A000E0B8B9 /* StartViewController.swift */; };
 		C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316AC2139F9A000E0B8B9 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		7566E1F9ED7B468D4AE5627B /* Pods-Hopeli Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.debug.xcconfig"; sourceTree = "<group>"; };
 		A1851BFF842341DE4C0245D1 /* Pods-Hopeli Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hopeli Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food.release.xcconfig"; sourceTree = "<group>"; };
 		C60712ED213BDCAA001162F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C60B017C21459A9600C1B104 /* DefineDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineDishesViewController.swift; sourceTree = "<group>"; };
+		C60B017E21459E1900C1B104 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
+		C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		C61316A52139F9A000E0B8B9 /* Hopeli Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hopeli Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61316A82139F9A000E0B8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61316AA2139F9A000E0B8B9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -93,11 +99,13 @@
 			isa = PBXGroup;
 			children = (
 				C6BB5861213BD4A1008B942E /* LoginViewController.swift */,
-				C61316AA2139F9A000E0B8B9 /* StartViewController.swift */,
 				C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */,
 				C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */,
+				C60B017C21459A9600C1B104 /* DefineDishesViewController.swift */,
+				C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */,
 				C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */,
 				C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */,
+				C61316AA2139F9A000E0B8B9 /* StartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 			children = (
 				C6DC05FE2139FBB400FDDCAE /* User.swift */,
 				C6DC0603213A060800FDDCAE /* Dishes.swift */,
+				C60B017E21459E1900C1B104 /* Ingredients.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,8 +232,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -232,8 +243,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -259,6 +272,9 @@
 				C6DC0601213A059400FDDCAE /* DishesTableViewController.swift in Sources */,
 				C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */,
 				C6DC0608213AFF2000FDDCAE /* UserTableViewCell.swift in Sources */,
+				C60B01812145C64F00C1B104 /* IngredientTableViewCell.swift in Sources */,
+				C60B017F21459E1900C1B104 /* Ingredients.swift in Sources */,
+				C60B017D21459A9600C1B104 /* DefineDishesViewController.swift in Sources */,
 				C6DC05FF2139FBB400FDDCAE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
