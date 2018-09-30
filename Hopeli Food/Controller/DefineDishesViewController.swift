@@ -95,20 +95,23 @@ class DefineDishesViewController: UIViewController, UITextFieldDelegate, UINavig
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+        
+        self.stepOverviewLabel.text = "Step 3: Select the Ingredients"
+        self.ingredientsTableView.isHidden = false
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+       if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {
             picker.dismiss(animated: true, completion: {
                 
                 do {
                     try self.realm.write {
-                        self.newDish.dishImage = NSData(data: UIImageJPEGRepresentation(image, 1)!)
+                        self.newDish.dishImage = NSData(data: image.jpegData(compressionQuality: 1)!)
                     }
                 }catch {
-                    print("Error while deleting \(error)")
+                    print("Error while saving \(error)")
                 }
                 self.dishImageView.image = image
                 self.stepOverviewLabel.text = "Step 3: Select the Ingredients"

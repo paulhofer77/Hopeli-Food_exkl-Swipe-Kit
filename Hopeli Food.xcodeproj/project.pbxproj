@@ -13,13 +13,12 @@
 		C60B017F21459E1900C1B104 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B017E21459E1900C1B104 /* Ingredients.swift */; };
 		C60B01812145C64F00C1B104 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */; };
 		C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316A82139F9A000E0B8B9 /* AppDelegate.swift */; };
-		C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61316AA2139F9A000E0B8B9 /* StartViewController.swift */; };
 		C61316AE2139F9A000E0B8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316AC2139F9A000E0B8B9 /* Main.storyboard */; };
 		C61316B02139F9A100E0B8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61316AF2139F9A100E0B8B9 /* Assets.xcassets */; };
 		C61316B32139F9A100E0B8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61316B12139F9A100E0B8B9 /* LaunchScreen.storyboard */; };
+		C638FCDF214B042500F2407A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638FCDE214B042500F2407A /* CollectionViewCell.swift */; };
 		C6BB5862213BD4A1008B942E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB5861213BD4A1008B942E /* LoginViewController.swift */; };
 		C6DC05FF2139FBB400FDDCAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC05FE2139FBB400FDDCAE /* User.swift */; };
-		C6DC0601213A059400FDDCAE /* DishesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */; };
 		C6DC0604213A060800FDDCAE /* Dishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0603213A060800FDDCAE /* Dishes.swift */; };
 		C6DC0608213AFF2000FDDCAE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */; };
 		C6DC060B213B1C8E00FDDCAE /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */; };
@@ -36,14 +35,13 @@
 		C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		C61316A52139F9A000E0B8B9 /* Hopeli Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hopeli Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61316A82139F9A000E0B8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C61316AA2139F9A000E0B8B9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C61316AD2139F9A000E0B8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C61316AF2139F9A100E0B8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61316B22139F9A100E0B8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C61316B42139F9A100E0B8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C638FCDE214B042500F2407A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C6BB5861213BD4A1008B942E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C6DC05FE2139FBB400FDDCAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewController.swift; sourceTree = "<group>"; };
 		C6DC0603213A060800FDDCAE /* Dishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dishes.swift; sourceTree = "<group>"; };
 		C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +101,8 @@
 				C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */,
 				C60B017C21459A9600C1B104 /* DefineDishesViewController.swift */,
 				C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */,
-				C6DC0600213A059400FDDCAE /* DishesTableViewController.swift */,
 				C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */,
-				C61316AA2139F9A000E0B8B9 /* StartViewController.swift */,
+				C638FCDE214B042500F2407A /* CollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +168,7 @@
 				TargetAttributes = {
 					C61316A42139F9A000E0B8B9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -232,10 +230,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hopeli Food/Pods-Hopeli Food-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -243,10 +239,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -266,10 +260,9 @@
 			files = (
 				C6BB5862213BD4A1008B942E /* LoginViewController.swift in Sources */,
 				C6DC060B213B1C8E00FDDCAE /* UserDetailViewController.swift in Sources */,
-				C61316AB2139F9A000E0B8B9 /* StartViewController.swift in Sources */,
+				C638FCDF214B042500F2407A /* CollectionViewCell.swift in Sources */,
 				C6DC060D213B321300FDDCAE /* DishesDetailViewController.swift in Sources */,
 				C6DC0604213A060800FDDCAE /* Dishes.swift in Sources */,
-				C6DC0601213A059400FDDCAE /* DishesTableViewController.swift in Sources */,
 				C61316A92139F9A000E0B8B9 /* AppDelegate.swift in Sources */,
 				C6DC0608213AFF2000FDDCAE /* UserTableViewCell.swift in Sources */,
 				C60B01812145C64F00C1B104 /* IngredientTableViewCell.swift in Sources */,
@@ -429,7 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "at.hopeli.Hopeli-Food";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -448,7 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "at.hopeli.Hopeli-Food";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

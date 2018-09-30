@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import RealmSwift
-import PopupDialog
 
 class LoginViewController: UIViewController {
 
@@ -62,17 +61,15 @@ class LoginViewController: UIViewController {
         
         let action = UIAlertAction(title: "Create User", style: .default) { (action) in
             
-
-            self.defaults.set(textfieldEmail.text!, forKey: "userEmail")
-            self.defaults.set(textfieldPasswort.text!, forKey: "userPasswort")
-            
             Auth.auth().createUser(withEmail: textfieldEmail.text!, password: textfieldPasswort.text!) { (user, error) in
                 if error != nil {
-                    print(error!)
+                    print("Error when signing in \(error!)")
                 }else {
                     print("Registration Successful")
                     self.newUser.userId = Auth.auth().currentUser?.uid
                     self.saveData(user: self.newUser)
+                    self.defaults.set(textfieldEmail.text!, forKey: "userEmail")
+                    self.defaults.set(textfieldPasswort.text!, forKey: "userPasswort")
                     self.performSegue(withIdentifier: "gotToUserFromCreate", sender: self)
                     
                 }
@@ -85,10 +82,7 @@ class LoginViewController: UIViewController {
             }
         alert.addAction(cancelButton)
         alert.addAction(action)
-//        alert.addTextField { (userNameTextfield) in
-//            userNameTextfield.placeholder = "Set your User Name"
-//            textfieldUserName = userNameTextfield
-//        }
+
         
         alert.addTextField { (emailTextfield) in
             emailTextfield.placeholder = "EnterYour E-Mail Adress"
@@ -171,8 +165,7 @@ class LoginViewController: UIViewController {
 //        loginPasswortTextfield.isHidden = false
 //        loginEmailTextfield.isHidden = false
            
-        popUp.addButton(buttonOne)
-        self.present(popUp, animated: true, completion: nil)
+       
         }
     }
     
@@ -180,12 +173,6 @@ class LoginViewController: UIViewController {
 }
 
 
-//MARK: - PopUp Dialog methods
-
-    let popUp = PopupDialog(title: "First PopUp", message: "I am just playing around")
-    let buttonOne = CancelButton(title: "Cancel", dismissOnTap: true) {
-        print("Cancelled")
-        }
 
 
 

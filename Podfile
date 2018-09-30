@@ -9,7 +9,6 @@ pod 'RealmSwift'
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-pod 'PopupDialog', '~> 0.8' 
 
 
 end

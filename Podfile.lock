@@ -1,5 +1,4 @@
 PODS:
-  - DynamicBlurView (2.0.2)
   - Firebase (5.6.0):
     - Firebase/Core (= 5.6.0)
   - Firebase/Auth (5.6.0):
@@ -65,8 +64,6 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - PopupDialog (0.8.1):
-    - DynamicBlurView (~> 2.0)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
   - Realm/Headers (3.7.6)
@@ -77,12 +74,10 @@ DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Database
-  - PopupDialog (~> 0.8)
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - DynamicBlurView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -95,12 +90,10 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
-    - PopupDialog
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
-  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseAuth: 657a25e4be044d2d333663ebf515a861c5a59cd7
@@ -113,10 +106,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  PopupDialog: 3d4e8e0795c3a614f407d730986c9b9af9781123
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
 
-PODFILE CHECKSUM: 342f1fa4597b33b2e6e2c7179040c549076b4a6a
+PODFILE CHECKSUM: 5e2829fbb310bcd6a09f9f5ecf2f424012011e7b
 
 COCOAPODS: 1.5.3

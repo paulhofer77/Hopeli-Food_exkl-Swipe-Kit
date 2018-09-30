@@ -34,7 +34,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         userImage.clipsToBounds = true
         
         if  let imageFromSelectedUser = selectedUser?.userImage {
-            userImage.image = UIImage(data: imageFromSelectedUser as! Data)
+            userImage.image = UIImage(data: imageFromSelectedUser as Data)
         } else {
             userImage.image = UIImage(named: "user-default-image")
         }
@@ -120,7 +120,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             updateModel(at: indexPath)
             loadDishesData()
@@ -181,14 +181,14 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
                 
                 do {
                     try self.realm.write {
-                        self.selectedUser?.userImage = NSData(data: UIImageJPEGRepresentation(image, 1)!)
+                        self.selectedUser?.userImage = NSData(data: image.jpegData(compressionQuality: 1)!)
                     }
                 }catch {
                     print("Error while deleting \(error)")
