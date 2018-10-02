@@ -97,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				C6BB5861213BD4A1008B942E /* LoginViewController.swift */,
-				C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */,
 				C6DC060A213B1C8E00FDDCAE /* UserDetailViewController.swift */,
+				C6DC0606213AFF2000FDDCAE /* UserTableViewCell.swift */,
 				C60B017C21459A9600C1B104 /* DefineDishesViewController.swift */,
 				C60B01802145C64F00C1B104 /* IngredientTableViewCell.swift */,
 				C6DC060C213B321300FDDCAE /* DishesDetailViewController.swift */,
@@ -416,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z6486ZWCC;
 				INFOPLIST_FILE = "Hopeli Food/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,6 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z6486ZWCC;
 				INFOPLIST_FILE = "Hopeli Food/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

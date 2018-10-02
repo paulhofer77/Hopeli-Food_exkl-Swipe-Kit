@@ -17,6 +17,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var dishesTableView: UITableView!
     
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     var selectedUser: User? {
         didSet {
@@ -35,8 +36,10 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if  let imageFromSelectedUser = selectedUser?.userImage {
             userImage.image = UIImage(data: imageFromSelectedUser as Data)
+            userNameLabel.text = self.selectedUser?.userName
         } else {
             userImage.image = UIImage(named: "user-default-image")
+            userNameLabel.text = "no User Name set"
         }
         
         
